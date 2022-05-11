@@ -1,5 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
+
+import Button from '@mui/material/Button';
+
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -31,6 +34,8 @@ export default function Home() {
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
+
+          <Button variant="contained">Hello World</Button>
 
           <a
             href="https://github.com/vercel/next.js/tree/canary/examples"

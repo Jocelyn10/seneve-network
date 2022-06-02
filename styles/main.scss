@@ -1,4 +1,9 @@
+@import 'scss/variables';
+
 // Components
-@import 'scss/components/navbar.scss';
+@import 'scss/components/navbar';
+@import 'scss/components/home-banner';
+
+// Sections
 
 @import 'scss/globals.scss';

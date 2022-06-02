@@ -1,3 +1,7 @@
+.navbar-header {
+  border-bottom: 1px solid #e2e8f0;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -66,6 +70,7 @@
 
   .navitem {
     margin: 2.5rem 0;
+    text-decoration: none;
   }
 
   .hamburger {

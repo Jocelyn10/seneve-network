@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { navLinks } from '../../../utils/menuLinks';
 import Link from 'next/link';
 
+import NavItem from '../NavItem/NavItem';
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
@@ -17,18 +19,12 @@ const NavBar = () => {
         >
           {navLinks.map((link, index) => {
             return (
-              <li key={index} className="navitem">
-                <Link href={link.path}>
-                  <a
-                    className={
-                      isOpen === false ? 'navlink' : 'navlink' + ' ' + 'active'
-                    }
-                    onClick={openMenu}
-                  >
-                    {link.name}
-                  </a>
-                </Link>
-              </li>
+              <NavItem
+                key={index}
+                link={link.path}
+                name={link.name}
+                openMenu={() => openMenu()}
+              />
             );
           })}
         </ul>

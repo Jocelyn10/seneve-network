@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import React from 'react';
 import Link from 'next/link';
 
 import Button from '@mui/material/Button';
 
-const HomeBanner = ({ link, name, openMenu }) => {
-  const router = useRouter();
-
+const HomeBanner = () => {
   return (
     <div className="home-banner">
       <div className="home-banner__content-wrapper">

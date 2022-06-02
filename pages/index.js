@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import Button from '@mui/material/Button';
-
 import Banner from '../src/components/Banners/HomeBanner';
 
 import styles from '../styles/Home.module.scss';
@@ -18,10 +16,6 @@ export default function Home() {
       <Banner />
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
@@ -37,8 +31,6 @@ export default function Home() {
             <h2>Learn &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
-
-          <Button variant="contained">Hello World</Button>
 
           <a
             href="https://github.com/vercel/next.js/tree/canary/examples"

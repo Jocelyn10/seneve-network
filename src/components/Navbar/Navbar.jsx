@@ -12,42 +12,22 @@ const NavBar = () => {
         <a className="navlogo">[BrandLogo]</a>
       </Link>
       <ul className={isOpen === false ? 'navmenu' : 'navmenu' + ' ' + 'active'}>
-        <li className="navitem">
-          <Link href="/">
-            <a
-              className={
-                isOpen === false ? 'navlink' : 'navlink' + ' ' + 'active'
-              }
-              onClick={openMenu}
-            >
-              Home
-            </a>
-          </Link>
-        </li>
-        <li className="navitem">
-          <Link href="/about">
-            <a
-              className={
-                isOpen === false ? 'navlink' : 'navlink' + ' ' + 'active'
-              }
-              onClick={openMenu}
-            >
-              About
-            </a>
-          </Link>
-        </li>
-        <li className="navitem">
-          <Link href="/contact">
-            <a
-              className={
-                isOpen === false ? 'navlink' : 'navlink' + ' ' + 'active'
-              }
-              onClick={openMenu}
-            >
-              Contact
-            </a>
-          </Link>
-        </li>
+        {navLinks.map((link, index) => {
+          return (
+            <li key={index} className="navitem">
+              <Link href={link.path}>
+                <a
+                  className={
+                    isOpen === false ? 'navlink' : 'navlink' + ' ' + 'active'
+                  }
+                  onClick={openMenu}
+                >
+                  {link.name}
+                </a>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
       <button
         className={
